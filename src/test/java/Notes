@@ -1,0 +1,8 @@
+Builder Pattern:
+  The Builder Design Pattern is a creational pattern used in software design to construct a complex object step by step.
+  It allows the construction of a product in a step-by-step fashion, where the construction process can vary based on the type of product being built.
+  The pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+
+  Step by step execution using same reference.
+
+RequestSpecification(I)

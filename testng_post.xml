@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/deepa/IdeaProjects/ATB7xAPIAutomation">
+        <classes>
+            <class name="org.automation.com.ex_15092024.CRUD.TestNG.POST_BDDStyle"></class>
+            <class name="org.automation.com.ex_15092024.CRUD.TestNG.POST_NonBDDStyle"></class>
+        </classes>
+    </test>
+</suite>
