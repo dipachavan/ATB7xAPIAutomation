@@ -15,12 +15,12 @@ public class NonBDDStyle {
         RequestSpecification requestSpecification;
         ValidatableResponse validatableResponse;
         Response response;
-        String token="2c8aa5f4166b102";
-        String bookingID="733";
+        String token="4c1cc33dfb931f5";
+        String bookingID="1290";
         String putPayload="{\n" +
-                "    \"firstname\" : \"Fname\",\n" +
-                "    \"lastname\" : \"Lname\",\n" +
-                "    \"totalprice\" : 10012,\n" +
+                "    \"firstname\" : \"Auto QA\",\n" +
+                "    \"lastname\" : \"Tester\",\n" +
+                "    \"totalprice\" : 100000,\n" +
                 "    \"depositpaid\" : false,\n" +
                 "    \"bookingdates\" : {\n" +
                 "        \"checkin\" : \"2023-11-10\",\n" +
@@ -38,6 +38,6 @@ public class NonBDDStyle {
 
         response= requestSpecification.when().put();
         validatableResponse=response.then().log().all();
-        //validatableResponse.statusCode(200);
+        validatableResponse.statusCode(200);
     }
 }
