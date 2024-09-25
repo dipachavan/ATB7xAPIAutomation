@@ -6,3 +6,21 @@ Builder Pattern:
   Step by step execution using same reference.
 
 RequestSpecification(I)
+
+TestNG:
+How Tests are run-
+    temp testng.xml file will copy @Test methods in java main file and run it.
+
+For Allure commandline:
+    npm i -g allure-commandline
+    also add dependency of allure-testng
+To generate allure report:
+    In terminal of IntelliJ write below command
+    allure serve allure-results/
+
+Those test class files are available in allure-results will be logged in the allure reports with above command.
+
+3 ways of Assertions:
+1)TestNG Assertions-soft and hard assertions
+2)HamCrest Assertions(RestAssured Default assertions)->no need to add dependency
+3)AssertJ Assertions-> need to add dependency

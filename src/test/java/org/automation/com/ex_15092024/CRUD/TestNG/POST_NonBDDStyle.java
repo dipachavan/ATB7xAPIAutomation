@@ -1,11 +1,13 @@
 package org.automation.com.ex_15092024.CRUD.TestNG;
 
+import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
 public class POST_NonBDDStyle {
+    @Description("This is POST by NON BDD style")
     @Test
     public void postNonBDDStyle() {
         String payload="{\n" +
