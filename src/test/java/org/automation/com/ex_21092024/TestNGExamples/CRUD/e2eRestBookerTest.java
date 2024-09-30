@@ -1,5 +1,6 @@
 package org.automation.com.ex_21092024.TestNGExamples.CRUD;
 
+import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -62,6 +63,7 @@ public class e2eRestBookerTest
         System.out.println(bookingID);
         return bookingID;
     }
+    @Description("Creating Booking ID")
     @Test
     public void updateBookingID()
     {
@@ -89,6 +91,7 @@ public class e2eRestBookerTest
         validatableResponse=response.then().log().all();
         validatableResponse.statusCode(200);
     }
+    @Description("Deleting Booking ID")
     @Test
     public void deleteBooking()
     {
@@ -105,6 +108,7 @@ public class e2eRestBookerTest
         String message = response.body().asString();
         Assert.assertEquals("Created",message);
     }
+    @Description("Getting Booking ID after its been deleted")
     @Test(dependsOnMethods = "deleteBooking")
     public void getBookingIDAfterDelete()
     {

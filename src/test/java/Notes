@@ -18,9 +18,46 @@ To generate allure report:
     In terminal of IntelliJ write below command
     allure serve allure-results/
 
+allure-results :
+    This folder contains the data of your test case,so to generate the report it will fetch data from this folder so basically you have to run it before generating the report.
+
 Those test class files are available in allure-results will be logged in the allure reports with above command.
 
 3 ways of Assertions:
 1)TestNG Assertions-soft and hard assertions
 2)HamCrest Assertions(RestAssured Default assertions)->no need to add dependency
 3)AssertJ Assertions-> need to add dependency
+import static org.assertj.core.api.Assertions.*;
+
+JSonPath:
+    Extracting data from json.
+
+POJOs:
+    for payload
+    3 ways
+    1)Using String
+    2)Using HashMap
+    3)Using Class(Most used)->can handle dynamic data using getters and setters.
+
+
+(java.lang.IllegalStateException: Cannot serialize object because no JSON serializer found in classpath)
+Getting this exception because RA does not support MAP.It supports Sting only by default.
+need to add 2 types of libraries(3 party)
+    1)gson
+    2)jackson
+
+Code reusability,maintainability is the answer why we are serializing and deserializing using POJO.
+
+Serialization:
+    Converting java code(hashmap or linkedhashmap) into string format is called as serialization using gson/jackson.
+    Java objects to json strings conversion is serialization.
+
+Deserialization:
+    json strings to Java objects conversion is deserialization.
+
+    To do this gson or jackson is required.As RA alone can not do this.
+
+JAVA objects can not be send over internet,but json/byte strings can be.So deserialization and serialization is important.
+
+Use below to create pojo classes:
+https://www.jsonschema2pojo.org/

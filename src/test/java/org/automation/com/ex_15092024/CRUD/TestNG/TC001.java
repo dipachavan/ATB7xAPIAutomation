@@ -1,11 +1,13 @@
 package org.automation.com.ex_15092024.CRUD.TestNG;
 
+import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
 public class TC001 {
 
+    @Description("For Report")
     @Test
     public void getMethod(){
         RestAssured
