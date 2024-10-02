@@ -58,7 +58,7 @@ public class RestBooker_E2E
     {
 //        Booking booking= new Booking();
         bookingReq.setFirstname("Deepa");
-        bookingReq.setLastname("Vilas Chavan");
+        bookingReq.setLastname("Chavan");
         bookingReq.setDepositpaid(true);
         bookingReq.setTotalprice(1200);
 //        bookingdates bookingdates=new bookingdates();
@@ -112,10 +112,14 @@ public class RestBooker_E2E
         validatableResponse.statusCode(200);
 
         //Deserialization
-        patchResponse= gson.fromJson(strResponse, PatchResponse.class);
-        System.out.println(patchResponse.getFirstname());
-        System.out.println(patchResponse.getLastname());
-        assertThat(patchResponse.getFirstname()).isEqualTo("DeepaChavan").isNotBlank();
+//        patchResponse= gson.fromJson(strResponse, PatchResponse.class);
+//        System.out.println(patchResponse.getFirstname());
+//        System.out.println(patchResponse.getLastname());
+
+        bookingReq= gson.fromJson(strResponse, Booking.class);
+        System.out.println(bookingReq.getFirstname());
+        System.out.println(bookingReq.getLastname());
+        assertThat(bookingReq.getFirstname()).isEqualTo("DeepaChavan").isNotBlank();
     }
     @Description("Deleting Booking ID")
     @Test(priority = 4)
